@@ -1,0 +1,18 @@
+datasource:
+  driver-class-name: org.h2.Driver
+  url: jdbc:h2:~/h2db/test
+  #url: jdbc:h2:mem:testdb
+  username: sa
+  password: '{cipher}c763828b5cd35bac8a65cac52a3260ed94502981b16336cec8d23963982b7f56'
+
+token:
+  expiration_time: 86400000
+  secret: user_token_default
+  
+gateway:
+  ip: 127.0.01  
+  
+order_service:
+  url: http://order-service/order-service/%s/orders
+  exception:
+    order_is_empty : User's order is empty
